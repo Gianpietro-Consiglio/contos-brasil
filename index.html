@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--fazer base de busca depois-->
+    <meta charset="UTF-8">
+    <title>Contos Brasil - Site de Literatura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link href="css/estilo.css" rel="stylesheet">
+    <style>
+        .conteudo{
+            background-image: url('../contos_brasil/imagens/fundo.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <div class="logo">
+            <h1 title="Site de contos brasileiros"><i class="fas fa-book-open"></i>&ensp; <a href="index.html">Contos
+                    Brasil</a> </h1>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="o-homem-trocado.html">O homem trocado</a></li>
+                <li><a href="vida-de-cinema.html">Vida de cinema</a></li>
+                <li><a href="amor.html">Amor</a></li>
+                <li><a href="felicidade-clandestina.html">felicidade clandestina</a></li>
+            </ul>
+        </nav>
+
+    </header>
+ 
+    <section class="popup">
+        <button type="button" class="fechar"> X </button>
+        <p>Preencha o seu nome e email e concorra
+            a um livro de crônicas da Clarisse Lispector.
+        </p>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!--Conteúdo da página-->
+
+    <div class="conteudo">
+        
+    <section>
+        <h2 class="abre">Participe de um sorteio de livro</h2>
+    </section>
+
+
+        <div id="coluna01">
+            <h2><img src="imagens/clarice.jpg" alt="foto de clarice lispector">Clarice Lispector</h2>
+            <p>
+                Clarice Lispector (1920-1977) foi um dos maiores nomes da literatura brasileira do Século XX. Com seu
+                romance inovador e com sua linguagem altamente poética, sua obra se destacou diante dos modelos
+                narrativos
+                tradicionais. Seu primeiro livro, “Perto do Coração Selvagem” recebeu o Prêmio Graça Aranha.
+            </p>
+                
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fs0Rt-_vkMM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+              
+        <div id="coluna02">
+            <h2><img src="imagens/luiz.jpg" alt="foto de luis fernando">Luis Fernando Verissimo</h2>
+            <p>
+                Luis Fernando Verissimo (1936) é um escritor brasileiro. Famoso por suas crônicas e contos de humor, é
+                também jornalista, tradutor, roteirista de programas para televisão e músico. É filho do escritor Érico
+                Verissimo.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K4rGsBjPI3w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--Rodapé-->
+
+    <footer>
+        <br>
+        <br>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234718.2413883522!2d-46.00310135611753!3d-23.18944426122024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bb3858cc2e7%3A0xba25a33168f8c1!2zU8OjbyBKb3PDqSBkb3MgQ2FtcG9zLCBTUA!5e0!3m2!1spt-BR!2sbr!4v1617104286870!5m2!1spt-BR!2sbr"
+            width="50%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <p id="peru">&copy; 2021 - Contos Brasil - Desenvolvido por Gianpietro Consiglio</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Isto é um comentário de linha
+        /* A sintaxe para execução de um método
+        a partir de um elemento é feita conforme abaixo: */
+        /* document.getElementById('rodape').onclick = function(){
+            console.log('Bom dia, a data atual é ' + Date());
+        } */
+
+        /*jquery*/
+        $('#rodape').click(function(){
+            console.log('Bom dia, a data atual é ' + Date());
+        })
+
+
+        //exibe pop up
+
+        /*maneira simples*/
+        /*$('.abre').click(function(){
+            $('.popup').css('display', 'block'); 
+        })*/
+        
+       
+        /*maneira estilosa*/
+        $('.abre').click(function(){
+            //fadeIn
+            $('.popup').slideDown();
+        })  
+        
+        //fechar
+
+        $('.fechar').click(function(){
+            $('.popup').fadeOut();
+        })
+       
+
+    </script>
+
+</body>
+
+</html>
