@@ -27,7 +27,6 @@ p{
 }
 
 header{
-    background-image: linear-gradient(pink, #ccc);
     border-top: 1px solid transparent;
     text-align: center;
     height: 130px;
@@ -74,7 +73,6 @@ h1 a {
 
 footer{
     display: block;
-    background-image: linear-gradient(pink, #ccc);
     border-bottom: 1px solid transparent;
 }
 
@@ -168,3 +166,4 @@ iframe{
     width: 400px;
     height: 400px;
 }
+
